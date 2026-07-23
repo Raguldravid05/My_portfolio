@@ -9,16 +9,8 @@ const CustomCursor: React.FC = () => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   
-  // Spring configurations for smooth trailing effect
-  const springConfig = { damping: 40, stiffness: 400, mass: 0.4 };
+  // Spring configurations for smooth ambient background spotlight
   const spotlightConfig = { damping: 50, stiffness: 150, mass: 0.8 };
-  
-  const dotX = useSpring(cursorX, { damping: 10, stiffness: 1000 });
-  const dotY = useSpring(cursorY, { damping: 10, stiffness: 1000 });
-  
-  const ringX = useSpring(cursorX, springConfig);
-  const ringY = useSpring(cursorY, springConfig);
-  
   const glowX = useSpring(cursorX, spotlightConfig);
   const glowY = useSpring(cursorY, spotlightConfig);
 
@@ -80,45 +72,16 @@ const CustomCursor: React.FC = () => {
 
   return (
     <>
-      {/* Dynamic Cursor Spotlight (Behind Content, Z-Index 0) */}
+      {/* Dynamic Ambient Spotlight (Behind Content, Z-Index 0) */}
       <motion.div
         className="fixed top-0 left-0 w-[450px] h-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none z-0 mix-blend-screen opacity-15 filter blur-[90px]"
         style={{
           x: glowX,
           y: glowY,
           background: isHovered 
-            ? 'radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(6, 182, 212, 0.1) 50%, transparent 100%)' 
+            ? 'radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, rgba(6, 182, 212, 0.15) 50%, transparent 100%)' 
             : 'radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.1) 60%, transparent 100%)',
         }}
-      />
-
-      {/* Cursor Target Dot (Top Z-Index) */}
-      <motion.div
-        className="fixed top-0 left-0 w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-cyan-400 rounded-full pointer-events-none z-9999"
-        style={{
-          x: dotX,
-          y: dotY,
-        }}
-        animate={{
-          scale: isHovered ? 1.5 : 1,
-          backgroundColor: isHovered ? '#06b6d4' : '#6366f1',
-        }}
-        transition={{ type: 'spring', stiffness: 500, damping: 20 }}
-      />
-
-      {/* Cursor Interactive Ring */}
-      <motion.div
-        className="fixed top-0 left-0 w-8 h-8 -translate-x-1/2 -translate-y-1/2 border border-indigo-400/50 rounded-full pointer-events-none z-9999 mix-blend-difference"
-        style={{
-          x: ringX,
-          y: ringY,
-        }}
-        animate={{
-          scale: isHovered ? 1.8 : 1,
-          borderColor: isHovered ? '#06b6d4' : 'rgba(99, 102, 241, 0.5)',
-          borderWidth: isHovered ? '2px' : '1px',
-        }}
-        transition={{ type: 'spring', stiffness: 400, damping: 25 }}
       />
     </>
   );

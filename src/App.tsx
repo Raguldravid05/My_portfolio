@@ -3,6 +3,7 @@ import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Education from './components/Education';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
@@ -20,6 +21,7 @@ const App: React.FC = () => {
     const sections = [
       'home', 
       'about', 
+      'education', 
       'skills', 
       'projects', 
       'experience', 
@@ -68,6 +70,7 @@ const App: React.FC = () => {
       <main className="w-full">
         <Hero />
         <About />
+        <Education />
         <Skills />
         <Projects />
         <Experience />

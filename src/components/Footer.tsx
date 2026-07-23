@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         {/* Social Quick-actions */}
         <div className="flex items-center space-x-4">
           <a
-            href="https://github.com"
+            href="https://github.com/Raguldravid05"
             target="_blank"
             rel="noreferrer"
             className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-slate-400 hover:text-white transition-colors"
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             <FaGithub size={16} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/ragul-dravid-7410742a5/"
             target="_blank"
             rel="noreferrer"
             className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-slate-400 hover:text-white transition-colors"
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
             <FaLinkedin size={16} />
           </a>
           <a
-            href="mailto:raguldravid.it27@gmail.com"
+            href="mailto:raguldravid0509@gmail.com"
             className="p-2.5 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-slate-400 hover:text-white transition-colors"
             aria-label="Email"
           >

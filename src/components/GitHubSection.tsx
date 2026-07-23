@@ -26,53 +26,45 @@ interface Repository {
 
 // Fallback high-fidelity developer stats if GitHub API fails/rate-limits
 const mockProfile: GitHubProfile = {
-  login: 'raguldravid',
+  login: 'Raguldravid05',
   avatar_url: '/profile.png',
   name: 'Ragul Dravid R',
   bio: 'B.Tech IT Student | Aspiring AI & Full Stack Developer | Building Prepzo AI',
-  public_repos: 14,
-  followers: 48,
-  following: 52
+  public_repos: 3,
+  followers: 1,
+  following: 0
 };
 
 const mockRepos: Repository[] = [
   {
-    name: 'Prepzo-AI-Core',
-    description: 'RAG pipeline for educational material synthesis using FastAPI, LlamaIndex, and ChromaDB vector embeddings.',
-    stargazers_count: 12,
-    forks_count: 3,
+    name: 'Cricket-Data-Analysis-',
+    description: 'Cricket data analysis project for exploring player and match statistics using Python and data visualization tools.',
+    stargazers_count: 1,
+    forks_count: 0,
     language: 'Python',
-    html_url: 'https://github.com'
+    html_url: 'https://github.com/Raguldravid05/Cricket-Data-Analysis-'
   },
   {
-    name: 'Movie-Recommendator-ML',
-    description: 'Collaborative filtering recommender system powered by Scikit-Learn, Pandas and Cosine Similarity.',
-    stargazers_count: 8,
-    forks_count: 2,
-    language: 'Python',
-    html_url: 'https://github.com'
+    name: 'prepzo',
+    description: 'Prepzo is an AI-powered study platform that helps engineering students prepare smarter for examinations. Students can upload syllabus PDFs and study materials, ask subject-related questions, and get AI answers.',
+    stargazers_count: 0,
+    forks_count: 0,
+    language: 'JavaScript',
+    html_url: 'https://github.com/Raguldravid05/prepzo'
   },
   {
-    name: 'Financial-Fraud-Detection',
-    description: 'Machine learning classification scripts for transaction anomaly filtering with evaluation metrics.',
-    stargazers_count: 5,
-    forks_count: 1,
-    language: 'Python',
-    html_url: 'https://github.com'
-  },
-  {
-    name: 'Premium-Portfolio-V1',
-    description: 'Personal single page portfolio built using React 19, Vite, Tailwind CSS and Framer Motion.',
-    stargazers_count: 15,
-    forks_count: 4,
+    name: 'raguldravid.github.io',
+    description: 'Personal portfolio website built with React, Vite, TypeScript, Tailwind CSS and Framer Motion.',
+    stargazers_count: 0,
+    forks_count: 0,
     language: 'TypeScript',
-    html_url: 'https://github.com'
+    html_url: 'https://github.com/Raguldravid05/raguldravid.github.io'
   }
 ];
 
 const GitHubSection: React.FC = () => {
-  const [username, setUsername] = useState('raguldravid');
-  const [inputVal, setInputVal] = useState('raguldravid');
+  const [username, setUsername] = useState('Raguldravid05');
+  const [inputVal, setInputVal] = useState('Raguldravid05');
   const [profile, setProfile] = useState<GitHubProfile | null>(null);
   const [repos, setRepos] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(false);

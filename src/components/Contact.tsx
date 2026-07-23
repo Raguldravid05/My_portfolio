@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle2, AlertCircle, Loader2, Phone } from 'lucide-react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
@@ -8,20 +8,26 @@ const contactInfo = [
   {
     icon: <Mail className="text-cyan-400" size={20} />,
     label: 'Email Address',
-    value: 'raguldravid.it27@gmail.com',
-    link: 'mailto:raguldravid.it27@gmail.com',
+    value: 'raguldravid0509@gmail.com',
+    link: 'mailto:raguldravid0509@gmail.com',
+  },
+  {
+    icon: <Phone className="text-emerald-400" size={20} />,
+    label: 'Phone Number',
+    value: '+91 8807739465',
+    link: 'tel:+918807739465',
   },
   {
     icon: <FaLinkedin className="text-blue-400" size={20} />,
     label: 'LinkedIn Profile',
-    value: 'linkedin.com/in/raguldravid',
-    link: 'https://linkedin.com',
+    value: 'linkedin.com/in/ragul-dravid',
+    link: 'https://www.linkedin.com/in/ragul-dravid-7410742a5/',
   },
   {
     icon: <FaGithub className="text-purple-400" size={20} />,
     label: 'GitHub Profile',
-    value: 'github.com/raguldravid',
-    link: 'https://github.com',
+    value: 'github.com/Raguldravid05',
+    link: 'https://github.com/Raguldravid05',
   },
   {
     icon: <MapPin className="text-rose-400" size={20} />,
@@ -59,33 +65,30 @@ const Contact: React.FC = () => {
 
     setStatus('loading');
 
-    // EmailJS Keys Configuration (Recruiters can easily wire this up!)
-    // For demo purposes, we will simulate the send to prevent crashes, but write the template code.
-    const serviceID = 'default_service';
-    const templateID = 'template_portfolio';
-    const publicKey = 'user_key';
+    // EmailJS Configuration — reads from .env file
+    const serviceID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  as string;
+    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+    const publicKey  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
 
-    const isKeysConfigured = publicKey !== 'user_key' && publicKey !== '';
+    const isConfigured = serviceID && templateID && publicKey &&
+      serviceID !== 'YOUR_SERVICE_ID';
 
-    if (isKeysConfigured && formRef.current) {
+    if (isConfigured && formRef.current) {
       try {
-        const result = await emailjs.sendForm(serviceID, templateID, formRef.current, publicKey);
-        if (result.text === 'OK') {
-          setStatus('success');
-          setStatusMsg('Thank you! Your message was sent successfully.');
-          setFormData({ name: '', email: '', subject: '', message: '' });
-        } else {
-          throw new Error('Email delivery failed.');
-        }
+        await emailjs.sendForm(serviceID, templateID, formRef.current, publicKey);
+        setStatus('success');
+        setStatusMsg('Message sent! I will get back to you soon. 🚀');
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } catch (err: any) {
+        console.error('EmailJS error:', err);
         setStatus('error');
-        setStatusMsg(err.message || 'An error occurred while sending your message.');
+        setStatusMsg('Failed to send message. Please email me directly at raguldravid0509@gmail.com');
       }
     } else {
-      // Sandbox Simulated Send (Incredibly fluid visual simulation for recruiter review!)
+      // Demo mode — no .env keys set yet
       setTimeout(() => {
         setStatus('success');
-        setStatusMsg('Message sent successfully! (Sandbox Simulated Mode)');
+        setStatusMsg('Message sent successfully! (Demo Mode — configure .env to go live)');
         setFormData({ name: '', email: '', subject: '', message: '' });
       }, 1500);
     }

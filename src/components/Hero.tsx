@@ -4,23 +4,23 @@ import { ArrowRight, Code2, Terminal, Cpu, FileText, CheckCircle2 } from 'lucide
 import ThreeBackground from './ThreeBackground';
 
 const roles = [
-  'Python Developer',
-  'React Developer',
-  'AI Developer',
-  'Data Analytics Enthusiast',
-  'Full Stack Learner',
+  'Data Analytics & AI Aspirant',
+  'Python & SQL Developer',
+  'B.Tech IT @ CSI College',
+  'AI Solutions Developer',
+  'Data Analyst & Visualizer',
 ];
 
 const floatingBadges = [
-  { name: 'React', color: 'from-cyan-400/20 to-cyan-500/10 border-cyan-400/30 text-cyan-300', x: -80, y: -120, delay: 0 },
-  { name: 'Python', color: 'from-yellow-400/20 to-yellow-500/10 border-yellow-400/30 text-yellow-300', x: 190, y: -140, delay: 0.5 },
-  { name: 'JavaScript', color: 'from-amber-400/20 to-amber-500/10 border-amber-400/30 text-amber-300', x: -180, y: -20, delay: 1 },
-  { name: 'FastAPI', color: 'from-emerald-400/20 to-emerald-500/10 border-emerald-400/30 text-emerald-300', x: 220, y: -40, delay: 0.2 },
-  { name: 'MongoDB', color: 'from-green-500/20 to-green-600/10 border-green-500/30 text-green-300', x: -140, y: 120, delay: 0.8 },
-  { name: 'Tailwind CSS', color: 'from-sky-400/20 to-sky-500/10 border-sky-400/30 text-sky-300', x: 180, y: 100, delay: 1.2 },
-  { name: 'Power BI', color: 'from-yellow-500/20 to-yellow-600/10 border-yellow-500/30 text-yellow-400', x: -60, y: 190, delay: 0.4 },
-  { name: 'SQL', color: 'from-orange-400/20 to-orange-500/10 border-orange-400/30 text-orange-300', x: 90, y: 200, delay: 0.7 },
-  { name: 'LLMs', color: 'from-indigo-400/20 to-indigo-500/10 border-indigo-400/30 text-indigo-300', x: -200, y: -100, delay: 1.5 },
+  { name: 'Python', color: 'from-yellow-400/20 to-yellow-500/10 border-yellow-400/30 text-yellow-300', x: -80, y: -120, delay: 0 },
+  { name: 'SQL', color: 'from-cyan-400/20 to-cyan-500/10 border-cyan-400/30 text-cyan-300', x: 190, y: -140, delay: 0.5 },
+  { name: 'Antigravity', color: 'from-emerald-400/20 to-emerald-500/10 border-emerald-400/30 text-emerald-300', x: -180, y: -20, delay: 1 },
+  { name: 'Pandas', color: 'from-indigo-400/20 to-indigo-500/10 border-indigo-400/30 text-indigo-300', x: 220, y: -40, delay: 0.2 },
+  { name: 'NumPy', color: 'from-sky-500/20 to-sky-600/10 border-sky-500/30 text-sky-300', x: -140, y: 120, delay: 0.8 },
+  { name: 'Power BI', color: 'from-yellow-500/20 to-yellow-600/10 border-yellow-500/30 text-yellow-400', x: 180, y: 100, delay: 1.2 },
+  { name: 'Tableau', color: 'from-orange-400/20 to-orange-500/10 border-orange-400/30 text-orange-300', x: -60, y: 190, delay: 0.4 },
+  { name: 'FastAPI', color: 'from-emerald-400/20 to-emerald-500/10 border-emerald-400/30 text-emerald-300', x: 90, y: 200, delay: 0.7 },
+  { name: 'LLMs', color: 'from-purple-400/20 to-purple-500/10 border-purple-400/30 text-purple-300', x: -200, y: -100, delay: 1.5 },
   { name: 'RAG', color: 'from-rose-400/20 to-rose-500/10 border-rose-400/30 text-rose-300', x: 210, y: 180, delay: 1.1 },
 ];
 
@@ -71,10 +71,55 @@ const Hero: React.FC = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    const content = 'Ragul Dravid R - B.Tech Information Technology Student & Aspiring Software/AI/Frontend Developer';
+    const content = `R. RAGUL DRAVID
+raguldravid0509@gmail.com | 8807739465 | Tamil Nadu, India
+GitHub: https://github.com/Raguldravid05 | LinkedIn: https://www.linkedin.com/in/ragul-dravid-7410742a5/
+
+OBJECTIVE
+Final-year B.Tech Information Technology student with a strong foundation in Python, SQL, Artificial Intelligence, and Data Analytics. Passionate about analyzing data, solving real-world problems, and developing innovative technology solutions through academic projects. Familiar with Git/GitHub and continuously learning modern technologies to build a successful career in Data Analytics and Artificial Intelligence.
+
+EDUCATION
+B.Tech in Information Technology — CSI College of Engineering, Ketti Expected 2027
+CGPA: 7.32 (till 5th Semester)
+
+TECHNICAL SKILLS
+Programming: Python, SQL
+Version Control: Git, GitHub
+Databases: MySQL
+Data Analysis&Visualization: Pandas, NumPy, Excel
+Tools: Antigravity
+
+INTERNSHIP EXPERIENCE
+Data Analytics Intern — Cloud Institution (30.06.2025 - 30.07.2025)
+• Cleaned, transformed, and visualized real-world datasets to generate actionable insights
+• Built dashboards and reports that translated complex analysis into clear
+• Gained hands-on exposure to cloud-based analytics tools and workflows
+
+Cloud&AI Intern — Featurgen Company
+• Worked with cloud computing and AI services to build practical applications.
+• Gained hands-on experience with cloud deployment, storage, and AI-powered solutions.
+
+PROJECTS
+Cricket Analytics
+• Analyzed 5,000+ match records using Python and Pandas to evaluate player performance metrics, then distilled the findings into clear, actionable insights
+Sales Data Dashboard
+• Designed an interactive Power BI and Tableau dashboard on 10,000+ rows of sales data, presenting trends and KPIs in an accessible format for business decision-making
+. Prepzo
+• AI-powered study platform for engineering students that enables users to upload syllabus PDFs and study materials, ask subject related questions, and generate exam-oriented 2-mark, 8-mark, and 13-mark answers using AI.
+
+SOFT SKILLS
+• Communication Skills
+• Teamwork and Collaboration
+• Analytical Thinking
+• Adaptability
+
+CERTIFICATIONS
+• Data Analytics Certification
+• Python Certification
+• SQL Certification`;
     const blob = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(blob);
-    link.download = 'Ragul_Dravid_Resume_Mock.txt';
+    link.download = 'R_Ragul_Dravid_Resume.txt';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -115,12 +160,12 @@ const Hero: React.FC = () => {
           {/* Main Title */}
           <div className="space-y-3">
             <h2 className="text-muted font-medium text-lg md:text-xl uppercase tracking-[0.2em]">
-              Welcome to my space
+              Welcome to my portfolio
             </h2>
             <h1 className="font-heading text-5xl md:text-7xl font-black tracking-tight text-white leading-tight">
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
-                Ragul Dravid
+                R. Ragul Dravid
               </span>
             </h1>
             
@@ -142,12 +187,7 @@ const Hero: React.FC = () => {
 
           {/* Description */}
           <p className="text-muted text-base md:text-lg leading-relaxed max-w-2xl font-light">
-            I'm a B.Tech Information Technology student passionate about building AI-powered applications, 
-            modern web experiences, and scalable software solutions. I enjoy transforming ideas into 
-            real-world products using <span className="text-white font-semibold">React</span>, 
-            <span className="text-white font-semibold"> Python</span>, <span className="text-white font-semibold">SQL</span>, 
-            <span className="text-white font-semibold"> FastAPI</span>, and modern AI technologies like 
-            <span className="text-white font-semibold"> RAG</span> and LLM orchestration.
+            I am a final-year <span className="text-white font-semibold">B.Tech Information Technology</span> student at <span className="text-white font-semibold">CSI College of Engineering, Ketti</span> with a strong foundation in <span className="text-white font-semibold">Python</span>, <span className="text-white font-semibold">SQL</span>, <span className="text-white font-semibold">Artificial Intelligence</span>, and <span className="text-white font-semibold">Data Analytics</span>. Passionate about solving real-world problems and creating impactful data and AI solutions.
           </p>
 
           {/* Action Buttons */}

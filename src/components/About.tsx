@@ -13,38 +13,38 @@ const infoCards = [
   {
     icon: <GraduationCap className="text-indigo-400" size={24} />,
     title: 'B.Tech IT',
-    value: 'Information Technology',
+    value: 'CSI College of Engineering',
     detail: 'Expected Graduation: 2027',
   },
   {
-    icon: <Code className="text-cyan-400" size={24} />,
-    title: 'Software Developer',
-    value: 'Full Stack Aspirant',
-    detail: 'React, Python, FastAPI',
+    icon: <Sparkles className="text-purple-400" size={24} />,
+    title: 'Academic CGPA',
+    value: '7.32 / 10',
+    detail: 'Till 5th Semester',
   },
   {
-    icon: <Sparkles className="text-purple-400" size={24} />,
-    title: 'AI Enthusiast',
-    value: 'LLMs & RAG',
-    detail: 'Model Orchestration',
+    icon: <Code className="text-cyan-400" size={24} />,
+    title: 'Programming',
+    value: 'Python & SQL',
+    detail: 'Git & GitHub Version Control',
   },
   {
     icon: <BarChart3 className="text-amber-400" size={24} />,
-    title: 'Data Analytics',
-    value: 'Business Insights',
-    detail: 'Power BI, SQL, Pandas',
+    title: 'Data Analysis',
+    value: 'Pandas, NumPy, Excel',
+    detail: 'MySQL & AI Applications',
+  },
+  {
+    icon: <Rocket className="text-emerald-400" size={24} />,
+    title: 'Special Tool',
+    value: 'Antigravity',
+    detail: 'Advanced AI & Coding Workflow',
   },
   {
     icon: <MapPin className="text-rose-400" size={24} />,
     title: 'Location',
     value: 'Tamil Nadu, India',
-    detail: 'Open to Relocation',
-  },
-  {
-    icon: <Rocket className="text-emerald-400" size={24} />,
-    title: 'Careers',
-    value: 'Open to Opportunities',
-    detail: 'Internships & Full-Time',
+    detail: 'Open to Opportunities',
   },
 ];
 
@@ -114,8 +114,8 @@ const About: React.FC = () => {
                 {/* Tech overlays inside card */}
                 <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/60 backdrop-blur-md border border-white/5 text-left select-none">
                   <div className="text-[10px] text-cyan-300 font-bold uppercase tracking-wider">Candidate Profile</div>
-                  <div className="text-white text-xs font-semibold mt-0.5">Ragul Dravid R</div>
-                  <div className="text-slate-400 text-[10px] mt-0.5">B.Tech IT Student @ Expected 2027</div>
+                  <div className="text-white text-xs font-semibold mt-0.5">R. Ragul Dravid</div>
+                  <div className="text-slate-400 text-[10px] mt-0.5">B.Tech IT @ CSI College of Engineering (2027)</div>
                 </div>
               </div>
             </div>
@@ -131,18 +131,13 @@ const About: React.FC = () => {
           >
             <div className="space-y-4">
               <h3 className="text-xl md:text-2xl font-bold font-heading text-white">
-                Aspiring Software & AI Developer
+                Final-Year B.Tech IT Student | Data Analytics & AI
               </h3>
               <p className="text-muted leading-relaxed text-base font-light">
-                I am currently pursuing a <span className="text-white font-medium">B.Tech in Information Technology</span>. 
-                With a strong interest in Software Engineering, Artificial Intelligence, Frontend Development, 
-                Data Analytics, and Cloud Technologies, I thrive at the intersection of logical backend infrastructure 
-                and polished frontend aesthetics.
+                Final-year <span className="text-white font-medium">B.Tech Information Technology</span> student at <span className="text-white font-medium">CSI College of Engineering, Ketti</span> with a strong foundation in <span className="text-white font-medium">Python, SQL, Artificial Intelligence, and Data Analytics</span>.
               </p>
               <p className="text-muted leading-relaxed text-base font-light">
-                I enjoy building production-ready applications, AI-powered systems (like RAG implementations), 
-                insightful data dashboards, and automated script pipelines. I am a self-driven learner, constantly 
-                adding modern web frameworks, LLM frameworks, and database structures to my toolbelt.
+                Passionate about analyzing data, solving real-world problems, and developing innovative technology solutions through academic projects. Familiar with <span className="text-white font-medium">Git/GitHub</span> and continuously learning modern technologies to build a successful career in Data Analytics and Artificial Intelligence.
               </p>
             </div>
 

@@ -160,17 +160,15 @@ body {
   opacity: 0.4;
 }
 
-/* Hide default cursor on desktop for custom interactive cursor glow */
+/* Standard professional cursor across all elements */
 @media (min-width: 1024px) {
   .custom-cursor-active {
-    cursor: none;
+    cursor: default;
   }
   .custom-cursor-active a, 
   .custom-cursor-active button,
-  .custom-cursor-active input,
-  .custom-cursor-active textarea,
   .custom-cursor-active [role="button"] {
-    cursor: none;
+    cursor: pointer;
   }
 }
 
